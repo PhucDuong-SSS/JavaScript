@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinh diem trung binhf</title>
+</head>
+<body>
+  <script>
+    let hoa = prompt("Nhập điểm hóa học");
+    let sinh = prompt("Nhập điểm sinh học");
+    let ly = prompt("Nhập điểm vật lý");
+
+    let diemHoa  = parseFloat(hoa);
+    let diemSinh  = parseFloat(sinh);
+    let diemLy = parseFloat(ly);
+    let diemTrungBinh = (diemHoa + diemSinh + diemLy)/3; 
+    window.alert("Điểm trung bình ba môn là :" +diemTrungBinh);
+  </script>
+</body>
+</html>
