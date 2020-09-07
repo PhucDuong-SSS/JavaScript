@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Baitapungdungmaytinh/style.css">
+  <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <td>Amount</td>
+      <td>FromCurent</td>
+      <td>To Curent</td>
+      <td rowspan="2"> <input type="button" value="Convert" id="btn-convert"></td>
+    </tr>
+    <tr>
+      <td> <input type="text" id="amount"></td>
+      <td>
+        <select id="from">
+          <option value="#" selected disabled>Choice your current</option>
+          <option value="15">Việt Nam(VNĐ)</option>
+          <option value="21">Anh(GPB)</option>
+        </select>
+      </td>
+      <td>
+        <select id="to">
+          <option value="#" selected disabled>Choice your current</option>
+          <option value="3">Usd</option>
+          <option value="4">Euro</option>
+
+          </select>
+      </td>    
+    </tr>
+  </table>
+
+  <p id="result">Result</p>
+  <script>
+    let numberFromValue="";
+    let numberToValue="";
+    let result ;
+    let amount;
+    
+    
+    
+    let from = document.getElementById("from");
+    from.addEventListener("change",getNumberFrom);
+
+    let to = document.getElementById("to");
+    to.addEventListener("change",getNumberTo);
+
+     
+
+    function getNumberFrom() {
+       numberFromValue = document.getElementById("from").value;
+       
+    }
+
+    function getNumberTo() {
+      numberToValue = document.getElementById("to").value;
+      
+    }
+
+    let convert= document.getElementById("btn-convert");
+    convert.addEventListener("click", convertMoney)
+
+    function convertMoney() {
+      amount= document.getElementById("amount").value;
+    
+     if( numberFromValue == 15 && numberToValue == 3) {
+      result = parseInt(amount)/23000;      
+     } 
+     if( numberFromValue == 15 && numberToValue == 4) {
+      result = parseInt(amount)/27240;     
+     } 
+     
+     if( numberFromValue == 21 && numberToValue == 3) {
+      result = parseInt(amount)/0.75;     
+     } 
+     if( numberFromValue == 21 && numberToValue == 3) {
+      result = parseInt(amount)/0.89;     
+     } 
+     
+     document.getElementById("result").innerHTML= "Result " +result; 
+    }
+
+    
+  </script>
+</body>
+</html>
