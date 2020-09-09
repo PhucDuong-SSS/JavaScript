@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #noButton {
+        position: relative;
+      }
+    </style>
+    <title>Do you love me</title>
+  </head>
+  <body>
+    <h2>Do you love me</h2>
+    <br />
+    <button onclick="clickYes()">Yes</button>
+    <button onmousemove="clickNo(this)" id="noButton">No</button>
+  </body>
+  <script>
+    function init() {
+      imgObj = document.getElementById("noButton");
+      imgObj.style.position = "relative";
+      imgObj.style.left = "10px";
+      imgObj.style.top = "10px";
+    }
+
+    function clickYes() {
+      alert("Yes you are right");
+    }
+
+    function clickNo(obj) {
+      // obj.style.top = parseInt(obj.style.top) + (Math.floor(Math.random() * 100)) + "px";
+      // obj.style.left = parseInt(obj.style.left) + (Math.floor(Math.random() * 100)) + "px";
+      var heightWindow = window.innerHeight;
+      var widthWindow = window.innerWidth;
+      if (
+        parseInt(obj.style.top) > 0 &&
+        parseInt(obj.style.top) < heightWindow &&
+        parseInt(obj.style.left) > 0 &&
+        parseInt(obj.style.left) < widthWindow
+      ) {
+        obj.style.top =
+          parseInt(obj.style.top) +
+          Math.floor(Math.random() * 500+ 200) +
+          "px";
+        obj.style.left =
+          parseInt(obj.style.left) +
+          Math.floor(Math.random() * 500 + 200) +
+          "px";
+      } else {
+        obj.style.left = "10px";
+        obj.style.top = "10px";
+      }
+    }
+    window.onload = init;
+  </script>
+</html>

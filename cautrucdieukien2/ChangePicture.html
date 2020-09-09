@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html,
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+    <title>Change picture</title>
+  </head>
+  <body>
+    <div class="puzple">
+      <button onclick="changePicture1()">
+        <img
+          id="image1"
+          src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg"
+        /></button
+      ><br />
+      <button onclick="changePicture2()">
+        <img
+          id="image2"
+          src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg"
+        /></button
+      ><br />
+      <button onclick="changePicture3()">
+        <img
+          id="image3"
+          src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg"
+        /></button
+      ><br />
+      <button onclick="changePicture4()">
+        <img
+          id="image4"
+          src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg"
+        /></button
+      ><br />
+      <button onclick="changePicture5()">
+        <img
+          id="image5"
+          src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg"
+        /></button
+      ><br />
+    </div>
+  </body>
+
+  <script>
+    var imagesPart1 = [
+      "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg",
+    ];
+    var imagesPart2 = [
+      "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg",
+    ];
+    var imagesPart3 = [
+      "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg",
+    ];
+    var imagesPart4 = [
+      "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/monkey_part4x1.jpg",
+    ];
+    var imagesPart5 = [
+      "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg",
+      "https://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg",
+    ];
+    var indexImage1 = 0;
+    var indexImage2 = 0;
+    var indexImage3 = 0;
+    var indexImage4 = 0;
+    var indexImage5 = 0;
+
+    function changeColor() {
+      if (
+        (indexImage1 == indexImage2) && (indexImage1 == indexImage3) && (indexImage1 == indexImage4) && 
+        (indexImage1 == indexImage5)
+      
+      ) {
+        document.getElementById("image1").style.boxShadow = "4px 4px 9px red";
+        document.getElementById("image2").style.boxShadow = "4px 4px 9px red";
+        document.getElementById("image3").style.boxShadow = "4px 4px 9px red";
+        document.getElementById("image4").style.boxShadow = "4px 4px 9px red";
+        document.getElementById("image5").style.boxShadow = "4px 4px 9px red";
+        
+      }
+      else {
+        {
+        document.getElementById("image1").style.boxShadow = "4px 4px 9px black";
+        document.getElementById("image2").style.boxShadow = "4px 4px 9px black";
+        document.getElementById("image3").style.boxShadow = "4px 4px 9px black";
+        document.getElementById("image4").style.boxShadow = "4px 4px 9px black";
+        document.getElementById("image5").style.boxShadow = "4px 4px 9px black";
+      }
+      }
+    }
+
+    function changePicture1() {
+      if (indexImage1 < imagesPart1.length) {
+        document.getElementById("image1").src = imagesPart1[indexImage1];
+        indexImage1++;
+      } else {
+        indexImage1 = Math.floor(Math.random() * 3);
+      }
+      changeColor();
+    }
+
+    function changePicture2() {
+      if (indexImage2 < imagesPart2.length) {
+        document.getElementById("image2").src = imagesPart2[indexImage2];
+        indexImage2++;
+      } else {
+        indexImage2 = Math.floor(Math.random() * 3);
+      }
+      changeColor();
+    }
+
+    function changePicture3() {
+      if (indexImage3 < imagesPart3.length) {
+        document.getElementById("image3").src = imagesPart3[indexImage3];
+        indexImage3++;
+      } else {
+        indexImage3 = Math.floor(Math.random() * 3);
+      }
+      changeColor();
+    }
+
+    function changePicture4() {
+      if (indexImage4 < imagesPart4.length) {
+        document.getElementById("image4").src = imagesPart4[indexImage4];
+        indexImage4++;
+      } else {
+        indexImage4 = Math.floor(Math.random() * 3);
+      }
+      changeColor();
+    }
+    function changePicture5() {
+      if (indexImage5 < imagesPart5.length) {
+        document.getElementById("image5").src = imagesPart5[indexImage5];
+        indexImage5++;
+      } else {
+        indexImage5 = Math.floor(Math.random() * 3);
+      }
+      changeColor();
+    }
+  </script>
+</html>
