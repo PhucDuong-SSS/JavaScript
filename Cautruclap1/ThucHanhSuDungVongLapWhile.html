@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhap tu hop thoai </title>
+</head>
+<body>
+  <script>
+    let num = prompt("Enter your number");
+    let total = 0;
+      while (num != -1) {
+        document.write(`${num}<br>`);
+        total += parseFloat(num); 
+        num = prompt("Enter your number");       
+      }
+      document.write(`Tong cac so la ${total}`);
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .body {
+        height: 200px;
+        width: 200px;
+        background-color: aquamarine;
+        display: block;
+      }
+      .button {
+        text-align: center;
+        height: 50px;
+        width: 50px;
+      }
+    </style>
+    <title>Game doan so</title>
+  </head>
+  <body>
+    <div class="body">
+      <div class="text">
+        <h2>Game doan so</h2>
+      </div>
+
+      <button onclick="Click()" class="button">Choi</button>
+      <!-- <div> <p id="result">Ket qua</p></div> -->
+    </div>
+    
+    <script>
+      let n;
+      let numberRandom;
+      function Click() {
+        numberRandom = Math.floor(Math.random() * 100);
+        n = prompt("Mời bạn nhập số từ 0 đến 99");
+        while(n != numberRandom) {
+          if (n>numberRandom) {
+            n = prompt("Mời bạn nhập số nhỏ hơn")
+          }
+          else {
+            n = prompt("Mời bạn nhập số lớn hơn");
+          }
+        }
+        if (n =numberRandom) {
+          window.alert("Bạn đã đoán đúng rồi")
+        }
+      }
+    </script>
+  </body>
+</html>

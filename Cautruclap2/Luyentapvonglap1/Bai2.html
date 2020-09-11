@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhac nho nguoi dung ve nhiet do</title>
+</head>
+<body>
+  <script>
+    let nhietdo = prompt("Nhap gia tri nhiet do");
+    while (nhietdo < 20 || nhietdo >100) {
+      alert("Ban can tang nhiet do neu nhiet do nhap nho hon 20 va giam nhiet do neu nhiet do lon hon 100")
+      nhietdo = prompt("Nhap gia tri nhiet do")
+      if (nhietdo >20 && nhietdo <100) {
+        alert(' nhiet do OK');
+        break;
+      }
+    }
+  
+  </script>
+</body>
+</html>

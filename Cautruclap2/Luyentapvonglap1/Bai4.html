@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hien thi so N trong day fibo chia het cho 5</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("Hieen thi so thu N trong day fibo chia het cho 5");
+      dem = 1;
+      let a;
+      if (n == 1) {
+        document.write(`0`);
+      } else {
+        let a1 = 0;
+        let a2 = 1;
+        while (dem < n) {
+          a = a1 + a2;
+          if (a % 5 == 0) {
+            dem++;
+          }
+          a1 = a2;
+          a2 = a;
+        }
+        document.write(`So thu ${n} trong day fibo chia het cho 5 la ${a}`);
+      }
+    </script>
+  </body>
+</html>

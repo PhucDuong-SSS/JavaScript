@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+  <script>
+    
+    let amount =  parseFloat(prompt("Nhap so tien vay"));  
+    let laisuat = parseFloat(prompt("Nhập lãi suất ngân hàng ")) ;
+    let sothanggui = parseFloat(prompt("Nhập số tháng cho vay")) ;
+    let index = 0;
+    while(index < sothanggui) {
+      amount += amount*laisuat/100;
+      index++;
+    }
+    alert(`Tổng số tiền phải trả ${amount}`)
+  </script>
+</body>
+</html>

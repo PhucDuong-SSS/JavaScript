@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinh tong N so dau tien trong day fibo</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("nhap N so hang can tinh tong trong day fibo ");
+      let total = 0;
+      dem = 2;
+      if (n == 1) {
+        total = 0;
+        document.write(`Tong ${n} so dau tien trong day fibo la ${total}`);
+      } else if (n == 2) {
+        total = 1;
+        document.write(`Tong ${n} so dau tien trong day fibo la ${total}`);
+      } else {
+        total =1 ;
+        let a1 = 0;
+        let a2 = 1;
+        let a;
+        while (dem < n) {
+          a = a1 + a2;s
+          total += a;
+          a1 = a2;
+          a2 = a;
+          dem++;
+        }
+        document.write(`Tong ${n} so dau tien trong day fibo la ${total}`);
+      }
+    </script>
+  </body>
+</html>
